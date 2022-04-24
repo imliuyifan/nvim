@@ -3,8 +3,6 @@ nnoremap <space> <nop>
 let mapleader = " "
 
 " force myself to use 'jk' instead of <esc>
-" so let's map <esc> to <nop>
-" inoremap <esc> <nop>
 inoremap jk <esc>
 cnoremap jk <esc>
 
