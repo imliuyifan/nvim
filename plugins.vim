@@ -67,6 +67,7 @@ nnoremap <leader>r <Plug>(unite_restart)
 " -------------------
 
 " use ag instead of ack
+" note that a trailing space is needed after Ag (Ack)
 if executable('ag')
   let g:ag_prg = 'ag --nogroup --nocolor --column'
   " --- type <leader> \ to search the word in all files in the current dir
