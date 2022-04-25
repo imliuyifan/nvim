@@ -40,20 +40,23 @@ endtry
 " -------------------
 
 " -- unite for file management
-let g:unite_source_history_yank_enable = 1
+" let g:unite_source_history_yank_enable = 1
 try
   let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'
   call unite#filters#matcher_default#use(['matcher_fuzzy'])
 catch
 endtry
 " search a file in the filetree
-nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
-nnoremap <space>f :split<cr> :<C-u>Unite file<cr>
-nnoremap <space>g :split<cr> :<C-u>Unite -start-insert file_rec/git<cr>
+nnoremap <leader>f :<C-u>Unite file<cr>
+nnoremap <leader>b :<C-u>Unite buffer<cr>
+nnoremap <leader>g :<C-u>Unite -start-insert file_rec/git<cr>
+nnoremap <leader><space> :<C-u>Unite -start-insert file_rec/async<cr>
+nnoremap <silent> ,ug  :<C-u>Unite file_rec/git:--cached:--others:--exclude-standard<CR>
+
 " see the yank history
-nnoremap <space>y :split<cr>:<C-u>Unite history/yank<cr>
+nnoremap <leader>y :split<cr>:<C-u>Unite history/yank<cr>
 " reset not it is <C-l> normally
-nnoremap <space>r <Plug>(unite_restart)
+nnoremap <leader>r <Plug>(unite_restart)
 
 
 " -------------------
@@ -63,13 +66,13 @@ nnoremap <space>r <Plug>(unite_restart)
 " use ag instead of ack
 if executable('ag')
   let g:ag_prg = 'ag --nogroup --nocolor --column'
-  " --- type <space> \ to search the word in all files in the current dir
-  nmap <space>* :Ag <c-r>=expand("<cword>")<cr><cr>
-  nnoremap <space>/ :Ag 
+  " --- type <leader> \ to search the word in all files in the current dir
+  nmap <leader>* :Ag <c-r>=expand("<cword>")<cr><cr>
+  nnoremap <leader>/ :Ag 
 else
   let g:ackprg = 'ag --nogroup --nocolor --column'
-  " --- type <space> \ to search the word in all files in the current dir
-  nmap <space>* :Ack <c-r>=expand("<cword>")<cr><cr>
-  nnoremap <space>/ :Ack 
+  " --- type <leader> \ to search the word in all files in the current dir
+  nmap <leader>* :Ack <c-r>=expand("<cword>")<cr><cr>
+  nnoremap <leader>/ :Ack 
 
 endif
