@@ -9,9 +9,6 @@
 " show relative (line) number
 set rnu
 
-" show trailing spaces and tabs
-set list
-
 " tab management
 set tabstop=2
 set softtabstop=2

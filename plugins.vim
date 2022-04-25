@@ -18,6 +18,9 @@ Plug 'rking/ag.vim'
 " will use ag.vim utill this is fixed
 Plug 'mileszs/ack.vim'
 
+"see and remove trailing spaces
+Plug 'bronson/vim-trailing-whitespace'
+
 call plug#end()
 
 " ###################
