@@ -25,3 +25,8 @@ map <leader>l <c-w>l
 map <leader>o <c-w>o
 map <leader>c <c-w>c
 
+" coc: GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)

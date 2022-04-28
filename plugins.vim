@@ -24,6 +24,12 @@ Plug 'bronson/vim-trailing-whitespace'
 "tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" neorg
+Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
+
+" coc.vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 " ###################
@@ -89,6 +95,8 @@ endif
 " -------------------
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
+  -- support for neorg (.norg file)
+  ensure_installed = { "norg", --[[ other parsers you would wish to have ]] },
   highlight = {
     enable = true,
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
@@ -99,3 +107,18 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+" -------------------
+"       NEORG
+" -------------------
+lua << EOF
+require('neorg').setup {
+  load = {
+      ["core.defaults"] = {}
+  }
+}
+EOF
+
+" -------------------
+"       COC
+" -------------------

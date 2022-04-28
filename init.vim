@@ -23,6 +23,6 @@ set cinoptions=(0,u0,U0
 set visualbell
 
 " Imports "{{{
-runtime ./maps.vim
 runtime ./plugins.vim
+runtime ./maps.vim
 "}}}
