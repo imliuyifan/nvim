@@ -127,3 +127,9 @@ EOF
 " -------------------
 " run the following command to install extensions.
 " :CocInstall coc-json coc-tsserver
+
+" coc: GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
