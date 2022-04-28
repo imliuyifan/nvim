@@ -93,6 +93,9 @@ endif
 " -------------------
 "       TREESITTER
 " -------------------
+"  run the following command after plugin is installed.
+"  :TSInstall <language_to_install>
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   -- support for neorg (.norg file)
@@ -122,3 +125,5 @@ EOF
 " -------------------
 "       COC
 " -------------------
+" run the following command to install extensions.
+" :CocInstall coc-json coc-tsserver

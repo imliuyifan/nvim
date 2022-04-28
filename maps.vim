@@ -17,7 +17,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>ss :split<cr>
 nnoremap <leader>vv :vsplit<cr>
 
-" buffer management (movement & open & close) 
+" buffer management (movement & open & close)
 map <leader>h <c-w>h
 map <leader>k <c-w>k
 map <leader>j <c-w>j
