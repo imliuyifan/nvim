@@ -30,6 +30,9 @@ Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
 " coc.vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" tpope/vim-commentary
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 " ###################
