@@ -19,6 +19,10 @@ set smartindent
 set cindent
 set cinoptions=(0,u0,U0
 
+" use smart case
+set ignorecase
+set smartcase
+
 " no beep
 set visualbell
 
