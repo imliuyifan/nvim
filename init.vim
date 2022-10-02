@@ -6,7 +6,9 @@
 " Personal
 " ========
 
-" show relative (line) number
+" use hybrid line numbers
+" i.e. show relative (line) number + abs current line number
+set number relativenumber
 set rnu
 
 " tab management
@@ -25,6 +27,9 @@ set smartcase
 
 " no beep
 set visualbell
+
+" for python
+let g:python_recommended_style = 0
 
 " Imports "{{{
 runtime ./maps.vim

@@ -33,6 +33,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " tpope/vim-commentary
 Plug 'tpope/vim-commentary'
 
+" arduino-vim
+Plug 'stevearc/vim-arduino'
+
+" github copilot
+" Plug 'github/copilot.vim'
+
 call plug#end()
 
 " ###################
